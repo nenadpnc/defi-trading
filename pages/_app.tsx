@@ -1,7 +1,24 @@
-import '../styles/globals.css'
+import { MetaMaskProvider } from 'metamask-react';
+import type { ReactElement, ReactNode } from 'react'
+import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
+import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode
 }
-export default MyApp
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout
+}
+
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page)
+  return (
+    <MetaMaskProvider>
+      {getLayout(<Component {...pageProps} />)}
+    </MetaMaskProvider>
+  );
+}
+
+export default MyApp;

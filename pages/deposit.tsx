@@ -1,10 +1,10 @@
+
 import Link from 'next/link';
 import type { ReactElement } from 'react'
 import Layout from '../components/layout';
 import styles from '../styles/Home.module.css';
 
-const Home = () => {
-
+const Deposit = () => {
   return (
     <>
       <Link href="/deposit">
@@ -22,10 +22,10 @@ const Home = () => {
   )
 }
 
-Home.getLayout = function getLayout(page: ReactElement) {
+Deposit.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout>{page}</Layout>
   )
 }
 
-export default Home
+export default Deposit

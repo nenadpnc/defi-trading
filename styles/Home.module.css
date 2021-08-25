@@ -74,7 +74,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 900px;
   margin-top: 3rem;
 }
 
@@ -88,6 +88,10 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   width: 45%;
+}
+
+.cardSingle {
+  width: 100%;
 }
 
 .card:hover,
@@ -111,6 +115,20 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.margin0 {
+  margin: 0 !important;
+}
+
+.button {
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
 }
 
 @media (max-width: 600px) {

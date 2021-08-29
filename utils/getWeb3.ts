@@ -1,15 +1,16 @@
 import Web3 from 'web3'
 
 const getWeb3 = () => {
-  let { web3 } = window as any;
-  const alreadyInjected = typeof web3 !== 'undefined' // i.e. Mist/Metamask
+  // using local ganache node
   const localProvider = `http://localhost:8545`
+  let web3;
+  if (typeof window !== 'undefined' && (window as any).web3 !== 'undefined') {
+    web3 = (window as any).web3
+  }
 
-  if (alreadyInjected) {
-    console.log(`Injected web3 detected.`)
+  if (web3) {
     web3 = new Web3(web3.currentProvider)
   } else {
-    console.log(`No web3 instance injected, using Local web3.`)
     const provider = new Web3.providers.HttpProvider(localProvider)
     web3 = new Web3(provider)
   }

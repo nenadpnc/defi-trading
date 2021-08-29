@@ -18,8 +18,8 @@ const Login: NextPage = () => {
     }
     if (status === 'notConnected') {
       return (
-        <button onClick={connect} className={`${styles.button} ${styles.card} ${styles.cardSingle}`}>
-          <h2 className={styles.margin0}>Login with Metamask &rarr;</h2>
+        <button onClick={connect} className={`${styles.button} ${styles['submit-btn']}`}>
+          <h2 className={styles['ma-0']}>Login with Metamask &rarr;</h2>
         </button>
       )
     }
@@ -31,8 +31,8 @@ const Login: NextPage = () => {
     }
     if (status === 'connected' && !isLoggedIn) {
       return (
-        <button onClick={() => verifyUser(account)} className={`${styles.button} ${styles.card} ${styles.cardSingle}`}>
-          <h2 className={styles.margin0}>Login with Metamask &rarr;</h2>
+        <button onClick={() => verifyUser(account)} className={`${styles.button} ${styles['submit-btn']}`}>
+          <h2 className={styles['ma-0']}>Login with Metamask &rarr;</h2>
         </button>
       )
     }

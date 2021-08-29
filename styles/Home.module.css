@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .main {
@@ -74,7 +73,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 900px;
+  width: 600px;
   margin-top: 3rem;
 }
 
@@ -96,7 +95,10 @@
 
 .card:hover,
 .card:focus,
-.card:active {
+.card:active,
+.button:focus,
+.button:active,
+.button:hover {
   color: #0070f3;
   border-color: #0070f3;
 }
@@ -117,18 +119,68 @@
   margin-left: 0.5rem;
 }
 
-.margin0 {
+.ma-0 {
   margin: 0 !important;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.ml-20 {
+  margin-left: 20px;
 }
 
 .button {
   background-color: transparent;
   outline: none;
   cursor: pointer;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .button:focus {
   outline: none;
+}
+
+.submit-btn {
+  padding: 10px;
+  border-color: #0070f3;
+  margin-top: 10px;
+}
+
+.tokens {
+  display: inline-block;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.balances {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+}
+
+.balances > div {
+  padding: 5px;
+}
+
+.cancel-btn {
+  padding: 3px;
+  font-size: 12px;
+  color: red;
+}
+
+.cancel-btn:hover {
+  color: white;
+  background-color: red;
+  border-color: transparent;
 }
 
 @media (max-width: 600px) {

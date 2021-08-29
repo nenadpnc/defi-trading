@@ -9,13 +9,13 @@ const Home = () => {
     <>
       <Link href="/deposit">
         <a className={styles.card}>
-          <h2 className={styles.margin0}>Deposit funds &rarr;</h2>
+          <h2 className={styles['ma-0']}>Deposit funds &rarr;</h2>
         </a>
       </Link>
 
-      <Link href="/sumbit">
+      <Link href="/order">
         <a className={styles.card}>
-          <h2 className={styles.margin0}>Submit orders &rarr;</h2>
+          <h2 className={styles['ma-0']}>Submit orders &rarr;</h2>
         </a>
       </Link>
     </>

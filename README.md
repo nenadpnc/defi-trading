@@ -20,3 +20,5 @@ $ yarn build
 $ yarn start
 ```
 App is available at [http://localhost:3000](http://localhost:3000)
+
+> Although `npm run dev` can be used to run app in development mode, nextjs dynamic compilation will reset in-memory db cache when first time navigating to different routes.
